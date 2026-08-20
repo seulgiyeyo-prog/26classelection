@@ -274,23 +274,17 @@
     </footer>
 
     <script>
-        // -------------------------------------------------------------
-        // [파이어베이스 설정 입력란]
-        // Firebase 콘솔에서 복사한 firebaseConfig 내용을 아래에 넣어주세요.
-        // -------------------------------------------------------------
         const firebaseConfig = {
-            apiKey: "YOUR_API_KEY",
-            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-            databaseURL: "https://YOUR_PROJECT_ID-default-rtdb.firebaseio.com",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_PROJECT_ID.appspot.com",
-            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-            appId: "YOUR_APP_ID"
+            apiKey: "AIzaSyC-KG2yKgaAI7CYdjrENHG-bM1-osj103M",
+            authDomain: "class1-3-vote.firebaseapp.com",
+            databaseURL: "https://class1-3-vote-default-rtdb.firebaseio.com",
+            projectId: "class1-3-vote",
+            storageBucket: "class1-3-vote.appspot.com",
+            messagingSenderId: "202655848749",
+            appId: "1:202655848749:web:73e671c16bbdf04db09ba4"
         };
 
-        if (firebaseConfig.apiKey !== "YOUR_API_KEY") {
-            firebase.initializeApp(firebaseConfig);
-        }
+        firebase.initializeApp(firebaseConfig);
 
         const TEACHER_PIN = '1303';
 
@@ -298,11 +292,6 @@
             e.preventDefault();
             const selected = document.querySelector('input[name="voteOption"]:checked');
             if (!selected) return;
-
-            if (firebaseConfig.apiKey === "YOUR_API_KEY") {
-                alert('Firebase 키가 아직 설정되지 않았습니다. 파이어베이스 설정을 완료한 후 사용해 주세요.');
-                return;
-            }
 
             const db = firebase.database();
             db.ref('votes').push({
@@ -343,11 +332,6 @@
         }
 
         function renderResults() {
-            if (firebaseConfig.apiKey === "YOUR_API_KEY") {
-                alert("Firebase 키가 입력되지 않아 데이터를 불러올 수 없습니다.");
-                return;
-            }
-
             const db = firebase.database();
             db.ref('votes').once('value', (snapshot) => {
                 const data = snapshot.val() || {};
@@ -375,7 +359,6 @@
 
         function resetVotes() {
             if (confirm('투표 데이터를 정말로 초기화하시겠습니까?')) {
-                if (firebaseConfig.apiKey === "YOUR_API_KEY") return;
                 const db = firebase.database();
                 db.ref('votes').remove().then(() => {
                     renderResults();
