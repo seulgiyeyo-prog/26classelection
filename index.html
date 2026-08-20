@@ -1,0 +1,387 @@
+<!-- Color Palette: Vibrant Blue & Amber | Confirmation: NEITHER Mermaid JS NOR SVG were used anywhere in this file. -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026학년도 2학기 1학년 3반 반장·부반장 선거 웹 포스터</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: #f1f5f9;
+            color: #0f172a;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-900 antialiased min-h-screen flex flex-col justify-between">
+
+    <header class="sticky top-0 z-40 bg-blue-700 text-white shadow-md">
+        <div class="max-w-4xl mx-auto px-4 py-3.5 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="bg-amber-400 text-blue-950 font-black px-2.5 py-1 rounded-md text-xs sm:text-sm">
+                    퇴계중 1-3
+                </span>
+                <h1 class="text-base sm:text-lg font-bold tracking-tight">반장·부반장 선거 포스터</h1>
+            </div>
+            <span class="bg-blue-800 text-blue-100 text-xs px-3 py-1 rounded-full font-semibold border border-blue-500/40">
+                단일 후보 찬반 투표
+            </span>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8 w-full space-y-8">
+
+        <section class="bg-gradient-to-br from-blue-700 via-blue-800 to-indigo-900 rounded-3xl p-6 sm:p-10 text-white card-shadow text-center relative overflow-hidden">
+            <div class="inline-block bg-amber-400 text-blue-950 font-black px-3.5 py-1 rounded-full text-xs sm:text-sm mb-3">
+                🗳️ 2026학년도 2학기 러닝메이트
+            </div>
+            
+            <h2 class="text-2xl sm:text-4xl font-extrabold leading-tight mb-3">
+                1학년 3반을 위해 약속합니다!
+            </h2>
+            <p class="text-blue-100 text-sm sm:text-base font-medium max-w-xl mx-auto mb-8">
+                말뿐이 아닌 실천으로 밝고 행복한 1학년 3반을 만들어 가겠습니다.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/20 text-left flex items-center space-x-4">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-400 text-blue-950 flex items-center justify-center font-black text-xl shadow-lg shrink-0">
+                        반장
+                    </div>
+                    <div>
+                        <div class="text-xs text-amber-300 font-bold tracking-wider">반장 후보</div>
+                        <div class="text-2xl font-black text-white">박 라 하</div>
+                        <div class="text-xs text-blue-100 mt-0.5">"3반의 든든한 해결사"</div>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/20 text-left flex items-center space-x-4">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-400 text-blue-950 flex items-center justify-center font-black text-xl shadow-lg shrink-0">
+                        부반
+                    </div>
+                    <div>
+                        <div class="text-xs text-emerald-300 font-bold tracking-wider">부반장 후보</div>
+                        <div class="text-2xl font-black text-white">신 유 림</div>
+                        <div class="text-xs text-blue-100 mt-0.5">"3반의 활력 비타민"</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-6">
+            <div class="text-center">
+                <h3 class="text-2xl font-black text-slate-900">💡 박라하 & 신유림의 5대 핵심 공약</h3>
+                <p class="text-slate-600 text-sm mt-1">우리 반 친구 모두를 위한 실천 약속입니다.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 card-shadow flex items-start space-x-4">
+                    <div class="text-3xl bg-blue-50 p-3 rounded-2xl shrink-0">☂️</div>
+                    <div>
+                        <div class="flex items-center space-x-2 mb-1">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-0.5 rounded">공약 1</span>
+                            <h4 class="text-lg font-bold text-slate-900">SOS 학급 우산 대여</h4>
+                        </div>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            갑자기 비가 와도 당황하지 마세요! 학급 비상 우산을 상시 구비하여 필요할 때 언제든 편하게 빌려 쓸 수 있도록 준비하겠습니다.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 card-shadow flex items-start space-x-4">
+                    <div class="text-3xl bg-amber-50 p-3 rounded-2xl shrink-0">✏️</div>
+                    <div>
+                        <div class="flex items-center space-x-2 mb-1">
+                            <span class="bg-amber-100 text-amber-800 text-xs font-bold px-2 py-0.5 rounded">공약 2</span>
+                            <h4 class="text-lg font-bold text-slate-900">학용품 나눔 & 대여함</h4>
+                        </div>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            지우개나 연필을 두고 왔을 때 불안해하지 않도록! 교실 내 공동 학용품함을 만들어 수업 준비 걱정을 덜어드리겠습니다.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 card-shadow flex items-start space-x-4">
+                    <div class="text-3xl bg-pink-50 p-3 rounded-2xl shrink-0">🎂</div>
+                    <div>
+                        <div class="flex items-center space-x-2 mb-1">
+                            <span class="bg-pink-100 text-pink-800 text-xs font-bold px-2 py-0.5 rounded">공약 3</span>
+                            <h4 class="text-lg font-bold text-slate-900">생일 축하 특징 페이퍼</h4>
+                        </div>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            우리 반 친구 한 명 한 명의 생일을 축하해 드립니다! 친구들의 마음과 장점을 담은 축하 페이퍼로 소중한 추억을 선물하겠습니다.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 card-shadow flex items-start space-x-4">
+                    <div class="text-3xl bg-emerald-50 p-3 rounded-2xl shrink-0">📮</div>
+                    <div>
+                        <div class="flex items-center space-x-2 mb-1">
+                            <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2 py-0.5 rounded">공약 4</span>
+                            <h4 class="text-lg font-bold text-slate-900">소통 건의함 설치</h4>
+                        </div>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            말하기 수줍었던 개선점이나 건의사항을 적어주세요. 주기적으로 확인하여 학급 회의에 적극 반영하고 개선하겠습니다.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 card-shadow flex items-start space-x-4 md:col-span-2">
+                    <div class="text-3xl bg-indigo-50 p-3 rounded-2xl shrink-0">🍩</div>
+                    <div>
+                        <div class="flex items-center space-x-2 mb-1">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs font-bold px-2 py-0.5 rounded">공약 5</span>
+                            <h4 class="text-lg font-bold text-slate-900">게릴라 간식 이벤트</h4>
+                        </div>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            시험 기간, 체육대회, 피곤한 월요일 등 응원이 필요할 때! 깜짝 간식 이벤트로 즐겁고 활기찬 학교 생활을 만들어 가겠습니다.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 card-shadow">
+            <div class="text-center max-w-md mx-auto mb-6">
+                <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Online Voting Station</span>
+                <h3 class="text-2xl font-black text-slate-900 mt-1">🗳️ 찬반 투표 참여하기</h3>
+                <p class="text-xs sm:text-sm text-slate-500 mt-1">
+                    단일 후보 찬반 투표입니다. 소중한 한 표를 행사해 주세요.<br>
+                    <strong class="text-slate-700">(투표 결과는 담임선생님께만 안전하게 전달됩니다.)</strong>
+                </p>
+            </div>
+
+            <form id="voteForm" class="max-w-md mx-auto space-y-4" onsubmit="submitVote(event)">
+                <div class="grid grid-cols-2 gap-4">
+                    <label class="cursor-pointer border-2 border-slate-200 rounded-2xl p-4 text-center hover:border-blue-500 transition has-[:checked]:border-blue-600 has-[:checked]:bg-blue-50/50">
+                        <input type="radio" name="voteOption" value="찬성" class="sr-only" required>
+                        <div class="text-3xl mb-1">👍</div>
+                        <div class="text-lg font-bold text-blue-900">찬 성</div>
+                    </label>
+
+                    <label class="cursor-pointer border-2 border-slate-200 rounded-2xl p-4 text-center hover:border-red-400 transition has-[:checked]:border-red-500 has-[:checked]:bg-red-50/50">
+                        <input type="radio" name="voteOption" value="반대" class="sr-only" required>
+                        <div class="text-3xl mb-1">👎</div>
+                        <div class="text-lg font-bold text-slate-800">반 대</div>
+                    </label>
+                </div>
+
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition text-base">
+                    투표 제출하기
+                </button>
+            </form>
+
+            <div id="voteSuccessMsg" class="hidden max-w-md mx-auto mt-4 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 text-center rounded-xl text-sm font-semibold">
+                🎉 투표가 정상적으로 제출되었습니다! 참여해 주셔서 감사합니다.
+            </div>
+        </section>
+
+        <div class="text-center pt-4">
+            <button onclick="openTeacherModal()" class="inline-flex items-center space-x-1.5 text-xs text-slate-500 hover:text-slate-800 underline underline-offset-4 font-medium transition">
+                <span>🔒</span>
+                <span>담임선생님 전용 결과 확인</span>
+            </button>
+        </div>
+
+    </main>
+
+    <div id="teacherModal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full card-shadow relative">
+            
+            <button onclick="closeTeacherModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 font-bold text-xl px-2">
+                ✕
+            </button>
+
+            <div id="authSection">
+                <div class="text-center mb-5">
+                    <div class="text-3xl mb-1">🔑</div>
+                    <h4 class="text-xl font-bold text-slate-900">담임교사 인증</h4>
+                    <p class="text-xs text-slate-500 mt-1">투표 결과를 확인하기 위해 비밀번호를 입력해 주세요.</p>
+                </div>
+
+                <div class="space-y-3">
+                    <input type="password" id="teacherPin" placeholder="비밀번호 입력 (기본: 1303)" class="w-full px-4 py-3 border border-slate-300 rounded-xl text-center font-mono text-lg focus:outline-none focus:border-blue-600">
+                    <button onclick="verifyTeacherPin()" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl text-sm">
+                        확인
+                    </button>
+                    <p id="pinErrorMsg" class="hidden text-xs text-red-500 text-center font-medium">비밀번호가 일치하지 않습니다.</p>
+                </div>
+            </div>
+
+            <div id="resultsSection" class="hidden space-y-5">
+                <div class="text-center border-b border-slate-100 pb-3">
+                    <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-0.5 rounded-full">담임교사 열람 모드</span>
+                    <h4 class="text-xl font-black text-slate-900 mt-2">📊 찬반 투표 실시간 집계</h4>
+                </div>
+
+                <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-4">
+                    <div class="flex justify-between items-center text-sm font-bold text-slate-700">
+                        <span>총 투표수</span>
+                        <span id="totalVotesCount" class="text-lg text-blue-700 font-black">0 표</span>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-1">
+                                <span class="text-blue-700">찬성</span>
+                                <span id="agreeCountText" class="text-slate-600">0표 (0%)</span>
+                            </div>
+                            <div class="w-full bg-slate-200 h-3 rounded-full overflow-hidden">
+                                <div id="agreeBar" class="bg-blue-600 h-full transition-all duration-500" style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-1">
+                                <span class="text-red-600">반대</span>
+                                <span id="disagreeCountText" class="text-slate-600">0표 (0%)</span>
+                            </div>
+                            <div class="w-full bg-slate-200 h-3 rounded-full overflow-hidden">
+                                <div id="disagreeBar" class="bg-red-500 h-full transition-all duration-500" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-2">
+                    <button onclick="resetVotes()" class="w-1/2 border border-slate-300 text-slate-600 hover:bg-slate-50 font-bold py-2.5 rounded-xl text-xs">
+                        투표함 초기화
+                    </button>
+                    <button onclick="closeTeacherModal()" class="w-1/2 bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 rounded-xl text-xs">
+                        닫기
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-center text-xs">
+        <div class="max-w-4xl mx-auto px-4 space-y-1">
+            <p class="font-semibold text-slate-300">퇴계중학교 1학년 3반 학급 선거관리위원회</p>
+            <p>반장 후보: 박라하 | 부반장 후보: 신유림</p>
+        </div>
+    </footer>
+
+    <script>
+        // -------------------------------------------------------------
+        // [파이어베이스 설정 입력란]
+        // Firebase 콘솔에서 복사한 firebaseConfig 내용을 아래에 넣어주세요.
+        // -------------------------------------------------------------
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+            databaseURL: "https://YOUR_PROJECT_ID-default-rtdb.firebaseio.com",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_PROJECT_ID.appspot.com",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        if (firebaseConfig.apiKey !== "YOUR_API_KEY") {
+            firebase.initializeApp(firebaseConfig);
+        }
+
+        const TEACHER_PIN = '1303';
+
+        function submitVote(e) {
+            e.preventDefault();
+            const selected = document.querySelector('input[name="voteOption"]:checked');
+            if (!selected) return;
+
+            if (firebaseConfig.apiKey === "YOUR_API_KEY") {
+                alert('Firebase 키가 아직 설정되지 않았습니다. 파이어베이스 설정을 완료한 후 사용해 주세요.');
+                return;
+            }
+
+            const db = firebase.database();
+            db.ref('votes').push({
+                option: selected.value,
+                timestamp: Date.now()
+            }).then(() => {
+                document.getElementById('voteForm').reset();
+                document.getElementById('voteSuccessMsg').classList.remove('hidden');
+                setTimeout(() => {
+                    document.getElementById('voteSuccessMsg').classList.add('hidden');
+                }, 4000);
+            }).catch(error => {
+                alert('투표 전송 중 오류가 발생했습니다: ' + error.message);
+            });
+        }
+
+        function openTeacherModal() {
+            document.getElementById('teacherModal').classList.remove('hidden');
+            document.getElementById('authSection').classList.remove('hidden');
+            document.getElementById('resultsSection').classList.add('hidden');
+            document.getElementById('teacherPin').value = '';
+            document.getElementById('pinErrorMsg').classList.add('hidden');
+        }
+
+        function closeTeacherModal() {
+            document.getElementById('teacherModal').classList.add('hidden');
+        }
+
+        function verifyTeacherPin() {
+            const pinInput = document.getElementById('teacherPin').value;
+            if (pinInput === TEACHER_PIN) {
+                document.getElementById('authSection').classList.add('hidden');
+                document.getElementById('resultsSection').classList.remove('hidden');
+                renderResults();
+            } else {
+                document.getElementById('pinErrorMsg').classList.remove('hidden');
+            }
+        }
+
+        function renderResults() {
+            if (firebaseConfig.apiKey === "YOUR_API_KEY") {
+                alert("Firebase 키가 입력되지 않아 데이터를 불러올 수 없습니다.");
+                return;
+            }
+
+            const db = firebase.database();
+            db.ref('votes').once('value', (snapshot) => {
+                const data = snapshot.val() || {};
+                let agree = 0;
+                let disagree = 0;
+
+                Object.values(data).forEach(item => {
+                    if (item.option === '찬성') agree++;
+                    if (item.option === '반대') disagree++;
+                });
+
+                const total = agree + disagree;
+                const agreePercent = total > 0 ? Math.round((agree / total) * 100) : 0;
+                const disagreePercent = total > 0 ? Math.round((disagree / total) * 100) : 0;
+
+                document.getElementById('totalVotesCount').innerText = `${total} 표`;
+                
+                document.getElementById('agreeCountText').innerText = `${agree}표 (${agreePercent}%)`;
+                document.getElementById('agreeBar').style.width = `${agreePercent}%`;
+
+                document.getElementById('disagreeCountText').innerText = `${disagree}표 (${disagreePercent}%)`;
+                document.getElementById('disagreeBar').style.width = `${disagreePercent}%`;
+            });
+        }
+
+        function resetVotes() {
+            if (confirm('투표 데이터를 정말로 초기화하시겠습니까?')) {
+                if (firebaseConfig.apiKey === "YOUR_API_KEY") return;
+                const db = firebase.database();
+                db.ref('votes').remove().then(() => {
+                    renderResults();
+                });
+            }
+        }
+    </script>
+</body>
+</html>
